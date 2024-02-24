@@ -18,13 +18,13 @@ echo -e "\033[1;31m[\033[1;36m4\033[1;31m] \033[1;37m• \033[1;33mADMINISTRAR U
 echo -e "\033[1;31m[\033[1;36m5\033[1;31m] \033[1;37m• \033[1;33mADMINISTRAR USUARIOS >>\E[3;31mTOKEN v2\E[0m<<"
 echo -e "\033[1;31m[\033[1;36m6\033[1;31m] \033[1;37m• \033[1;33mADMINISTRAR USUARIOS >>\E[3;31mV2RAY\E[0m<<"
 echo -e "\033[1;31m[\033[1;36m0\033[1;31m] \033[1;37m• \e[97m\033[1;41mVOLVER"
-echo -e $bar
+echo -e $bar4
 echo -ne "\033[1;32m➜ INGRESE UNA OPCION: \033[1;37m "; read option
 case $option in 
 
       1)  
       clear
-      admsshplus
+      admsshplus ;;
       2) 
       clear
       bash <(curl -sL https://raw.githubusercontent.com/gitter75/HERRAMIENTAS/main/HERRAMIENTAS/USERSSHV2)
