@@ -357,7 +357,7 @@ esac
 clear
 admherramientasv3 (){
 echo -e $bar4
-echo -e "\E[3;32m          >>>>   MENU DE HERRAMIENTAS V3   <<<<          \E[0m"
+echo -e "\E[3;32m        >>>>   MENU DE HERRAMIENTAS V3   <<<<          \E[0m"
 echo -e $bar4
 echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mTCP TWEEKER"
 echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mBLOCKEADOR DE SITIOS WEB"
@@ -454,20 +454,20 @@ case $option in
       paneludp ;;
       2) 
       clear
-      bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/modulosbin/main/MENUPSIPHONV1SSHPLUS.bin) 
+      bash <(curl -sL https://raw.githubusercontent.com/gitter75/HERRAMIENTAS/main/HERRAMIENTAS/PANELPSIPHONv1) 
       ;;
       3) 
       clear
-      bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/modulosbin/main/MENUPSIPHONV2SSHPLUS%20-%20copia.bin) ;;
+      bash <(curl -sL https://raw.githubusercontent.com/gitter75/HERRAMIENTAS/main/HERRAMIENTAS/PANELPSIPHONv2) ;;
       4)
       clear
-      bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/modulosbin/main/MENUWS-EPROSSHPLUSV2.bin) ;;
+      bash <(curl -sL https://raw.githubusercontent.com/gitter75/HERRAMIENTAS/main/HERRAMIENTAS/MENUADMWS-EPRO) ;;
       5)
       clear
-      bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/modulosbin/main/otrasherramientas.bin) ;;
+      bash <(curl -sL https://raw.githubusercontent.com/gitter75/HERRAMIENTAS/main/HERRAMIENTAS/MULTIINSTALADORDEPROTOCOLOS) ;;
       6)
       clear
-      bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/modulosbin/main/V2RAYV2.bin) ;;
+      bash <(curl -sL https://raw.githubusercontent.com/gitter75/HERRAMIENTAS/main/HERRAMIENTAS/MENUADMV2RAY) ;;
       0)
       echo -e "\033[1;31mSALIENDO...\033[0m"
       sleep 2
