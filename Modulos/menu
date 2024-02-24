@@ -946,7 +946,7 @@ echo -ne "\033[1;32m┗━┫ INGRESE UNA OPCION: \033[1;37m "; read option
 	case $option in 
 		  1)
         clear 
-        admuser ;;
+        menu_adm1 ;;
 		  2) 
         v2raymanager ;;
 		  3) 
