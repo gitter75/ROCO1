@@ -295,7 +295,7 @@ _userexp=$(printf '%-5s' "$_expuser")
 _tuser=$(awk -F: '$3>=1000 {print $1}' /etc/passwd | grep -v nobody | wc -l)
 clear
 echo -e $bar4
-echo -e "\E[3;36m       >>>>   MENU DE HERRAMIENTAS V2   <<<<          \E[0m"
+echo -e "\E[3;36m     >>>>   MENU DE HERRAMIENTAS V2   <<<<          \E[0m"
 echo -e $bar4
 echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mAGREGAR HOST"
 echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mELIMINAR HOST"
