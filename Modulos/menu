@@ -893,7 +893,7 @@ _tuser=$(awk -F: '$3>=1000 {print $1}' /etc/passwd | grep -v nobody | wc -l)
 clear
 clear
 echo -e $bar4
-echo -e "\E[3;92m          >--#   SCRIP HELBOYVPS   #--<          \E[0m"
+echo -e "\E[3;92m          >--#   SCRIPT HELBOYVPS   #--<          \E[0m"
 echo -e $bar4
 echo -e "\033[1;32mSISTEMA            MEMÓRIA RAM      PROCESADOR "
 echo -e "\033[1;31mOS: \033[1;37m$_system \033[1;31mTotal:\033[1;37m$_ram \033[1;31mNucleos: \033[1;37m$_core\033[0m"
@@ -915,7 +915,7 @@ echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mADMINISTRADOR
 [\033[1;36m6\033[1;31m] \033[1;37m• \033[1;33mCONFIGURACION DE PROTOCOLOS v1 ⛓\033[1;31m
 [\033[1;36m7\033[1;31m] \033[1;37m• \033[1;33mCONFIGURACION DE PROTOCOLOS v2 ⛓\033[1;31m 
 [\033[1;36m8\033[1;31m] \033[1;37m• \033[1;33mCONFIGURACION DE PROTOCOLOS v3 ⛓\033[1;31m            
-[\033[1;36m9\033[1;31m] \033[1;37m[!]\033[3;36mLIMPIAR VPS <> OPTIMIZADOR 🧽\033[1;31m
+[\033[1;36m9\033[1;31m] \033[1;37m[!]\033[3;92mLIMPIAR VPS <> OPTIMIZADOR 🧽\033[1;31m
 [\033[1;36m10\033[1;31m] \033[1;37m• \033[1;33mINICIO AUTOMATICO ⌛️ $autm\033[1;31m 
 $bar4
 [\033[1;36m11\033[1;31m]\033[1;37m•\033[3;32mACTUALIZAR $var01 \033[1;31m [\033[1;36m12\033[1;31m]\033[1;37m[!]\033[3;31mDESINSTALAR\033[1;31m [\033[1;36m0\033[1;31m] \033[1;37m• \e[97m\033[3;41mSALIR \033[1;31m"                 
