@@ -10,9 +10,9 @@ bar5="\033[0;31m==================================================\033[0m"
 clear
 menu_adm1 (){
 echo -e $bar4
-echo -e "\E[3;32m          >>>>   MENU DE OPCIONES   <<<<          \E[0m"
+echo -e "\E[3;36m          >>>>   MENU DE OPCIONES   <<<<          \E[0m"
 echo -e $bar4
-echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mADMINISTRAR USUARIOS v1\E[0m \E[1;36m>>\E[0m\E[3;31mSSH/WS/UDP...\E[0m<<"
+echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mADMINISTRAR USUARIOS v1 \E[0m \E[1;36m>>\E[0m \E[3;31mSSH/WS/UDP... \E[0m<<"
 echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mADMINISTRAR USUARIOS v2\E[0m \E[1;36m>>\E[0m\E[3;31mSSH/WS/UDP...\E[0m<<"
 echo -e "\033[1;31m[\033[1;36m3\033[1;31m] \033[1;37m• \033[1;33mADMINISTRAR USUARIOS\E[0m \E[1;36m>>\E[0m\E[3;31mHWID\E[0m<<"
 echo -e "\033[1;31m[\033[1;36m4\033[1;31m] \033[1;37m• \033[1;33mADMINISTRAR USUARIOS\E[0m \E[1;36m>>\E[0m\E[3;31mTOKEN v2\E[0m<<"
@@ -62,7 +62,7 @@ esac
 clear
 admsshplus (){
 echo -e $bar2
-echo -e "\E[3;38m           ADMINISTRACION DE USUARIOS           \E[0m"
+echo -e "\E[3;36m          ADMINISTRACION DE USUARIOS           \E[0m"
 echo -e $bar2
 echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mCREAR USUARIO >> SSH/UDP/WS"
 echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mCREAR USUARIO DEMO"
@@ -80,7 +80,10 @@ echo -ne "\033[1;32m➜ INGRESE UNA OPCION: \033[1;37m "; read option
        
        1)
        clear 
-       criarusuario ;;
+       criarusuario
+       tput civis
+       echo -ne "\n\033[1;37m      ►► PRESIONE ENTER PARA CONTINUAR ◄◄\033[0m"; read 
+       tput cnorm ;;
        2)
        clear
        criarteste 
@@ -191,7 +194,7 @@ _userexp=$(printf '%-5s' "$_expuser")
 _tuser=$(awk -F: '$3>=1000 {print $1}' /etc/passwd | grep -v nobody | wc -l)
 clear
 echo -e $bar4
-echo -e "\E[3;32m          >>>>   MENU DE HERRAMIENTAS V1   <<<<          \E[0m"
+echo -e "\E[3;36m       >>>>   MENU DE HERRAMIENTAS V1   <<<<          \E[0m"
 echo -e $bar4
 echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mTEST DE VELOCIDAD"
 echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mAGREGAR/ELIMINAR BANNER"
@@ -292,7 +295,7 @@ _userexp=$(printf '%-5s' "$_expuser")
 _tuser=$(awk -F: '$3>=1000 {print $1}' /etc/passwd | grep -v nobody | wc -l)
 clear
 echo -e $bar4
-echo -e "\E[3;32m          >>>>   MENU DE HERRAMIENTAS V2   <<<<          \E[0m"
+echo -e "\E[3;36m       >>>>   MENU DE HERRAMIENTAS V2   <<<<          \E[0m"
 echo -e $bar4
 echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mAGREGAR HOST"
 echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mELIMINAR HOST"
@@ -357,7 +360,7 @@ esac
 clear
 admherramientasv3 (){
 echo -e $bar4
-echo -e "\E[3;32m        >>>>   MENU DE HERRAMIENTAS V3   <<<<          \E[0m"
+echo -e "\E[3;36m       >>>>   MENU DE HERRAMIENTAS V3   <<<<          \E[0m"
 echo -e $bar4
 echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mTCP TWEEKER"
 echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mBLOCKEADOR DE SITIOS WEB"
@@ -436,7 +439,7 @@ esac
 clear
 menuprotocolosv2 (){
 echo -e $bar4
-echo -e "\E[3;32m          >>>>   MENU DE PROTOCOLOS V2   <<<<          \E[0m"
+echo -e "\E[3;36m          >>>>   MENU DE PROTOCOLOS V2   <<<<          \E[0m"
 echo -e $bar4
 echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mMENU ADM >>UDP CUSTOM<<"
 echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mMENU ADM >>PSIPHON v1<<"
@@ -484,7 +487,7 @@ esac
 clear
 paneludp (){
 echo -e $bar
-echo -e "\E[44;1;37m               PANEL UDP CUSTOM              \E[0m"
+echo -e "\E[44;1;36m               PANEL UDP CUSTOM              \E[0m"
 echo -e $bar
 echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mMENU INSTALAR >>UDP CUSTOM<<"
 echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mACCEDER AL PANEL"
@@ -889,7 +892,7 @@ _tuser=$(awk -F: '$3>=1000 {print $1}' /etc/passwd | grep -v nobody | wc -l)
 clear
 clear
 echo -e $bar4
-echo -e "\E[44;3;37m          >>>>   SCRIP HELBOYVPS   <<<<          \E[0m"
+echo -e "\E[3;36m          >>>>   SCRIP HELBOYVPS   <<<<          \E[0m"
 echo -e $bar4
 echo -e "\033[1;32mSISTEMA            MEMÓRIA RAM      PROCESADOR "
 echo -e "\033[1;31mOS: \033[1;37m$_system \033[1;31mTotal:\033[1;37m$_ram \033[1;31mNucleos: \033[1;37m$_core\033[0m"
@@ -911,10 +914,10 @@ echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mADMINISTRADOR
 [\033[1;36m6\033[1;31m] \033[1;37m• \033[1;33mCONFIGURACION DE PROTOCOLOS v1 ⛓\033[1;31m
 [\033[1;36m7\033[1;31m] \033[1;37m• \033[1;33mCONFIGURACION DE PROTOCOLOS v2 ⛓\033[1;31m 
 [\033[1;36m8\033[1;31m] \033[1;37m• \033[1;33mCONFIGURACION DE PROTOCOLOS v3 ⛓\033[1;31m            
-[\033[1;36m9\033[1;31m] \033[1;37m• \033[1;36mLIMPIAR VPS <> OPTIMIZADOR 🧽\033[1;31m
+[\033[1;36m9\033[1;31m] \033[1;37m[!]\033[3;36mLIMPIAR VPS <> OPTIMIZADOR 🧽\033[1;31m
 [\033[1;36m10\033[1;31m] \033[1;37m• \033[1;33mINICIO AUTOMATICO ⌛️ $autm\033[1;31m 
 $bar4
-[\033[1;36m11\033[1;31m]\033[1;37m•\033[3;32mACTUALIZAR $var01 \033[1;31m [\033[1;36m12\033[1;31m] \033[1;31m• \033[3;31mDESINSTALAR\033[1;31m [\033[1;36m0\033[1;31m] \033[1;37m• \e[97m\033[3;41mSALIR \033[1;31m"                 
+[\033[1;36m11\033[1;31m]\033[1;37m•\033[3;32mACTUALIZAR $var01 \033[1;31m [\033[1;36m12\033[1;31m]\033[1;37m[!]\033[3;31mDESINSTALAR\033[1;31m [\033[1;36m0\033[1;31m] \033[1;37m• \e[97m\033[3;41mSALIR \033[1;31m"                 
 echo -e $bar4
 echo -ne "\033[1;32m┗━┫ INGRESE UNA OPCION: \033[1;37m "; read option
 
