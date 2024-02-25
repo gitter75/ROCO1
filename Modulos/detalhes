@@ -1,17 +1,24 @@
 #!/bin/bash
+bar="\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"              
+bar2="\033[0;31m=============================================\033[0m"
+bar3="\033[0;31m---------------------------------------------\033[0m"
+bar4="\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+bar5="\033[0;31m==================================================\033[0m"
+
 clear
-echo -e "\E[44;1;37m               INFORMACOES DO VPS                 \E[0m"
-echo ""
+echo -e $bar4
+echo -e "\E[3;36m          >>>>   INFORMACION DE SU VPS   <<<<          \E[0m"
+echo -e $bar4
 if [ -f /etc/lsb-release ]
 then
-echo -e "\033[1;31m• \033[1;32mSISTEMA OPERACIONAL\033[1;31m •\033[0m"
+echo -e "\033[1;31m------• \033[1;32mSISTEMA OPERATIVO\033[1;31m •------\033[0m"
 echo ""
 name=$(cat /etc/lsb-release |grep DESCRIPTION |awk -F = {'print $2'})
 codename=$(cat /etc/lsb-release |grep CODENAME |awk -F = {'print $2'})
-echo -e "\033[1;33mNome: \033[1;37m$name"
-echo -e "\033[1;33mCodeName: \033[1;37m$codename"
-echo -e "\033[1;33mKernel: \033[1;37m$(uname -s)"
-echo -e "\033[1;33mKernel Release: \033[1;37m$(uname -r)"
+echo -e "\033[1;33mNombre: \033[1;37m---------------------->$name"
+echo -e "\033[1;33mCodeName: \033[1;37m-------------------->$codename"
+echo -e "\033[1;33mKernel: \033[1;37m---------------------->$(uname -s)"
+echo -e "\033[1;33mKernel Release: \033[1;37m-------------->$(uname -r)"
 if [ -f /etc/os-release ]
 then
 devlike=$(cat /etc/os-release |grep LIKE |awk -F = {'print $2'})
