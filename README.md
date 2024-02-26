@@ -1,6 +1,6 @@
 # SSHPLUS
 ### 🎊 INSTALADOR HELLBOY VPS
 ```
-wget https://raw.githubusercontent.com/gitter75/ROCO1/main/Plus && chmod 777 Plus && ./Plus
+wget https://raw.githubusercontent.com/gitter75/RACO2/main/Plus && chmod 777 Plus && ./Plus
 ``` 
 
